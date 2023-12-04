@@ -1,0 +1,11 @@
+---
+repos:
+  - repo: local
+    hooks:
+      - id: ctags-test
+        name: ctags test
+        description: Test for Solidity ctags
+        entry: ./test/run.sh
+        language: system
+        files: (\.ctags$|^test/)
+        args: [promote]
