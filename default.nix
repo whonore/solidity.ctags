@@ -1,7 +1,7 @@
 { lib, stdenvNoCC, }:
 stdenvNoCC.mkDerivation rec {
   pname = "solidity.ctags";
-  version = "0.0.1";
+  version = "0.0.2";
 
   phases = [ "installPhase" ];
 
