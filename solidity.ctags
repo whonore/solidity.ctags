@@ -7,15 +7,17 @@
 --kinddef-Solidity=E,event,Event
 --kinddef-Solidity=f,function,Function
 --kinddef-Solidity=m,modifier,Modifier
+--kinddef-Solidity=n,enumerator,Enum value
 
 --_tabledef-Solidity=top
 --_tabledef-Solidity=comment
+--_tabledef-Solidity=enum
 
 --_mtable-regex-Solidity=top/\/\*//{tenter=comment}
 --_mtable-regex-Solidity=top/\/\/[^\n]*//
 --_mtable-regex-Solidity=top/contract\s+(\w+)/\1/c/
 --_mtable-regex-Solidity=top/struct\s+(\w+)/\1/s/
---_mtable-regex-Solidity=top/enum\s+(\w+)/\1/e/
+--_mtable-regex-Solidity=top/enum\s+(\w+)/\1/e/{tenter=enum}{scope=push}
 --_mtable-regex-Solidity=top/event\s+(\w+)/\1/E/
 --_mtable-regex-Solidity=top/function\s+(\w+)/\1/f/
 --_mtable-regex-Solidity=top/modifier\s+(\w+)/\1/f/
@@ -23,3 +25,7 @@
 
 --_mtable-regex-Solidity=comment/\*\///{tleave}
 --_mtable-regex-Solidity=comment/.//
+
+--_mtable-regex-Solidity=enum/}//{tleave}{scope=pop}
+--_mtable-regex-Solidity=enum/(\w+)/\1/n/{scope=ref}
+--_mtable-regex-Solidity=enum/.//
