@@ -15,8 +15,10 @@
 !_TAG_KIND_DESCRIPTION!Solidity	c,contract	/Contract/
 !_TAG_KIND_DESCRIPTION!Solidity	e,enum	/Enum/
 !_TAG_KIND_DESCRIPTION!Solidity	f,function	/Function/
+!_TAG_KIND_DESCRIPTION!Solidity	i,interface	/Interface/
 !_TAG_KIND_DESCRIPTION!Solidity	m,modifier	/Modifier/
 !_TAG_KIND_DESCRIPTION!Solidity	n,enumerator	/Enum value/
+!_TAG_KIND_DESCRIPTION!Solidity	r,error	/Error/
 !_TAG_KIND_DESCRIPTION!Solidity	s,struct	/Struct/
 !_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
 !_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
@@ -34,6 +36,8 @@ E	test.sol	/^enum E { EA, EB, EC }$/;"	e
 EA	test.sol	/^enum E { EA, EB, EC }$/;"	n	enum:E
 EB	test.sol	/^enum E { EA, EB, EC }$/;"	n	enum:E
 EC	test.sol	/^enum E { EA, EB, EC }$/;"	n	enum:E
+I	test.sol	/^interface I {$/;"	i
+R	test.sol	/^error R(uint rx, bool[] ry);$/;"	r
 S	test.sol	/^struct S {$/;"	s
 V	test.sol	/^event V(uint vx, address payable vy);$/;"	E
 f	test.sol	/^    function f() public {}$/;"	f

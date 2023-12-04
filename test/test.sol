@@ -6,9 +6,13 @@ struct S {
 enum E { EA, EB, EC }
 
 event V(uint vx, address payable vy);
+error R(uint rx, bool[] ry);
 
 contract C {
     modifier m() { _; }
 
     function f() public {}
+}
+
+interface I {
 }
