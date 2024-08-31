@@ -16,3 +16,6 @@ contract C {
 
 interface I {
 }
+
+library L {
+}
